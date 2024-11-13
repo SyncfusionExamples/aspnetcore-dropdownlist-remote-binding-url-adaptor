@@ -1,0 +1,11 @@
+﻿@model ASPNETCore.Controllers.HomeController.OrdersDetails
+
+
+<div id='url-data' class='col-lg-6' style='padding-top:15px'>
+    <div class='content'>
+        <ejs-dropdownlist id="ddlUser" name="ddlUser" filterType="Contains" allowFiltering="true" ejs-for="Values"  placeholder="Select Users"  filterBarPlaceholder="Search users">
+            <e-data-manager adaptor="UrlAdaptor" url="@Url.Action("UrlDatasource", "Home" , new { ID = Model.ID })" crossDomain="true"></e-data-manager>
+            <e-dropdownlist-fields text="shipCountry" value="orderID"></e-dropdownlist-fields>
+        </ejs-dropdownlist>
+    </div>
+</div>
